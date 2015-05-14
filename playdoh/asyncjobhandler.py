@@ -283,7 +283,7 @@ class AsyncJobHandler(object):
                         result = job.result
                 results.append(result)
         print "get results with job ids"
-        print results
+        # print results
         return results
 
     def has_finished(self, job_ids):
@@ -391,7 +391,7 @@ class JobRun(object):
         results = self.concatenate(results)
         if self.local:
             close_servers(self.get_machines())
-        print "results in async job handler ", results
+        # print "results in async job handler ", results
         return results
 
     def get_result(self):
